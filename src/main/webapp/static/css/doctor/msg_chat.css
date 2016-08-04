@@ -1,0 +1,32 @@
+.msg_con{width:1000px;margin:0 auto 30px;}
+.zxz_user{height:52px;line-height:52px;}
+.msg_chat{border:1px solid #ccc;padding:50px;height:690px;overflow-y:auto;}
+.msg_chat .left_msg,.msg_chat .right_msg { overflow: hidden;padding-bottom:30px;}
+.msg_chat .left_msg p, .msg_chat .left_msg .left {float: left;}
+.msg_chat p{padding:30px 18px 14px;border:1px solid #e1e1e1;line-height:26px;max-width:690px;position:relative;}
+.msg_chat span{text-align:center;line-height:30px;display:block;color:#666;}
+.msg_chat p img{max-width:690px}
+.msg_chat .left_msg p{margin-left:33px;min-width:138px;}
+.msg_chat .left_msg,.msg_chat .right_msg{position:relative;}
+.msg_chat b{width:14px;height:16px;background:url(/static/images/doctor/msg_j_l_icon.jpg) no-repeat;position:absolute;left:71px;top:20px;z-index:2;}
+.msg_chat .right_msg p,.msg_chat .right_msg .left {float: right;}
+.msg_chat .right_msg p{margin-right:33px;min-width: 138px;}
+.msg_chat .right_msg b{background-image:url(/static/images/doctor/msg_j_r_icon.jpg);right:71px;left:auto;}
+.msg_chat s{display:block;position: absolute;right:20px;top:5px;color:#666;} 
+.msg_chat .right_msg s{left:18px;min-width:140px;}
+
+.msg_send{border:1px solid #ccc;border-top:0;padding:25px  0 25px 55px;}
+.msg_send textarea{width:655px;height:48px;border:1px solid #ccc;float:left;}
+.msg_send a{width:100px;height:50px;background-color: #0096dc;display:block;float:left;line-height:50px;text-align:center;color:#fff;font-size:18px;margin-left:16px;}
+
+.muban{width:1000px;margin:0 auto;height:auto;}
+.muban ul{overflow:hidden;}
+.muban ul li{line-height:34px;margin-bottom:25px;width:100%;height:34px;}
+.muban span{font-size:16px;margin-right:7px;float:left;}
+.muban ul li .title{float:left;display:inline-block;border:1px solid #ccc;width:912px;height:32px;padding:0 5px;color:#666;}
+.muban ul li .muban_con{float:left;display:inline-block;border:1px solid #ccc;width:902px;height:360px;padding:10px;line-height:20px;}
+.muban ul.thisselectli li{height:26px;line-height:26px;margin-bottom:0;width:175px;}
+.muban ul.thisselectli .select180_li li { width: 175px; }
+
+
+

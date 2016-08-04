@@ -1,0 +1,20 @@
+table.matrix td.name{width:9%}
+table.matrix td.telephone,table.matrix td.role,table.matrix td.department,table.matrix td.type{
+    width:12%;
+}
+table.matrix td.cjsj,table.matrix td.operation{
+    width:20%;
+}
+table.matrix td.operation{
+    width:16%;
+}
+
+div#main div.dialog.yhgl > .title input[type="search"] {
+    border: 0 none;
+    border-radius: 5px;
+    height: 24px;
+    margin-bottom: 6px;
+    margin-left: 30px;
+    margin-right: 10px;
+    width: 160px;
+}

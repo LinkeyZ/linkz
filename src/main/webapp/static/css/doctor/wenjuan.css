@@ -1,0 +1,26 @@
+html, body, div, span,h1, h2, h3, h4, p,a, address,del, em, img, s,strong,b, u, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,p,input { margin: 0; padding: 0; border: 0; list-style: none; background: transparent; }
+body{font-size: 14px;color:#333;font-family: "宋体";background-color: #efefef;}
+a{text-decoration: none;color: #333;}
+img{vertical-align:top;}
+input{vertical-align:text-bottom;margin-right: 5px;}
+
+.main{width:800px;margin:0 auto;background-color: #fff;padding: 10px 30px 40px;}
+
+h1{text-align: center;line-height: 50px;}
+h2{font-size:16px;line-height:30px;margin-top:10px;}
+.txt_wj{width:100%;height:22px;padding:5px;}
+input[type=text]{border-bottom:1px solid #ccc;outline:none;padding:0 2px;height:20px;float:left;width:120px;}
+.txt_wj input[type=checkbox]{}
+.txt_wj span{display:inline-block;line-height:20px;float:left;}
+.label_other label{margin-right:20px;line-height:20px;}
+b{font-size:12px;color:#f00;font-weight:normal;}
+.left label{float:left;}
+.left input{width:80px;}
+.numId input{width:300px;}
+/* s{display:inline-block;width:100%;height:5px;} */
+.wj_br{height:46px;}
+.margin-top5{margin-top:10px;}
+.txt_select{line-height:25px;margin:6px;}
+.txt_select input{margin-left:20px;}
+input.age{width:50px;}
+input.float_none{float:none;margin-left:0;}

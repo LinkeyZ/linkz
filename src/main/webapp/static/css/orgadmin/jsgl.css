@@ -1,0 +1,74 @@
+div.pop_dialog.del_role .content{
+    width:300px;
+
+}
+div.pop_dialog.ck_role .content .zy_list{
+    height:300px;
+}
+div.pop_dialog.ck_role .content{
+    padding-bottom: 40px;
+}
+div.pop_dialog.ck_role .content a.btn{
+    float: right;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+span.choose{
+    position:relative;
+    display: inline-block;
+}
+div#main div.dialog.jsgl>.right_menu *{
+    height:auto;
+}
+div#main div.dialog.jsgl a{
+    display: inline-block;
+    vertical-align: middle;
+}
+div#main div.dialog.jsgl>.title input[type="search"]{
+    height:24px;
+    border-radius: 5px;
+    border:0;
+    width:160px;
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-bottom: 6px;
+}
+div#main div.dialog.jsgl>.title>span{
+    background:url("/static/images/orgadmin/lbbt.png") no-repeat left center;
+}
+
+
+form #rolename,form span.roletype, form select#roletype,form select#roletype + span + select{
+    width:180px;
+}
+form span.xzjg,form #xzjg,form select#xzjg,form select#xzjg + span + select{
+    width:300px;
+}
+
+
+
+td.jsmc{
+    width:19%;
+}
+td.jslx,td.ksmc{
+    width:16%;
+}
+td.qxlb{
+    width:10%;
+}
+td.cjsj,td.operation{
+    width:21%;
+}
+td a.look{cursor: pointer}
+
+
+
+form dd div#xzqx{
+    width:200px;
+    height:260px;
+    border:1px solid grey;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    background-color:#f1f5e4;
+}
+

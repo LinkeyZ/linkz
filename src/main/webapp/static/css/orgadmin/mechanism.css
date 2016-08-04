@@ -1,0 +1,232 @@
+
+
+
+
+   .tip_menu .add_user>a{
+        background:url("/static/images/orgadmin/tjyh.png") no-repeat center center;
+   }
+   .tip_menu .add_mechanism>a{
+       background:url("/static/images/orgadmin/tjjg.png") no-repeat center center;
+   }
+   .tip_menu .modify>a{
+       background:url("/static/images/orgadmin/xg.png") no-repeat center center;
+   }
+   .tip_menu .check>a{
+       background:url("/static/images/orgadmin/check.png") no-repeat center center;
+       background-size: 70%;
+   }
+  .tip_menu .del>a{
+      background:url("/static/images/orgadmin/del.png") no-repeat center center;
+      background-size: 40%;
+  }
+
+   .dialog>ul.fir_menu{
+       background-color:#f0f3fa;
+   }
+
+   .dialog ul li{
+       clear:both;
+       color:#000;
+
+       border-bottom: 1px solid #ccc;
+   }
+
+   .dialog ul li *{
+       line-height: 35px;
+       height:35px;
+       vertical-align: middle;
+   }
+   .dialog li>a{
+       display: inline-block;
+       padding:5px;
+       width:20px;
+       height:35px;
+       background:url("/static/images/orgadmin/arrow-right.png") no-repeat center center;
+   }
+   .dialog ul.fir_menu>li{
+       padding-left:15px;
+       background-color:#fff;
+
+   }
+   .dialog ul.sec_menu>li{
+       padding-left:35px;
+   }
+   .dialog ul.sec_menu>ul>li{
+       padding-left:50px;
+   }
+   .dialog .curItem>a{
+       background:url("/static/images/orgadmin/arrow-down.png") no-repeat center center;
+   }
+
+   .dialog li:hover,.dialog ul.fir_menu>li:hover{
+       color:#fff;
+       background-color:#1bb8cb;
+   }
+
+   .dialog>ul.fir_menu div.tip_menu{
+       padding-right:15px;
+       display: none;
+   }
+   .dialog li:hover .tip_menu{
+       display: block;
+   }
+
+
+    div.pop_dialog.ckjgxx form #area,div.pop_dialog.ckjgxx form #area1{
+        width:120px;
+    }
+
+   form input{
+       width:200px;
+       margin:0 5px;
+   }
+   form input#detail_address{
+       width:160px;
+   }
+
+
+
+   form textarea#department{
+       width:130px;
+       height:80px;
+   }
+
+   form>div,form div>input{
+       width:100%;
+       margin-top: 10px;
+
+
+   }
+   form input#department{
+       height:80px;
+   }
+   form div.logoImg,form div.welcome_img{
+       margin:10px 0;
+   }
+
+   /*
+   *
+   upload
+   *
+   */
+
+
+
+/*popdialog*/
+
+
+    form>div.permission{
+        clear:both;
+        width:100%;
+        margin:5px 0;
+ 
+        float:left;
+  
+    }
+    textarea#permission{
+        margin-left: 30px;
+    }
+  div.pop_dialog>div.content{
+      margin-top: 40px;
+      margin-bottom: 50px;
+  }
+
+  div.pop_dialog.add_user form dl dt{
+      width:60px;
+  }
+
+  form select.area,select#mechanism_type,form #area,form #sec_areaform select.jglx,div.pop_dialog.add_user form select.usertype,div.pop_dialog.add_user form select.choose_package{
+      width:200px;
+  }
+
+  textarea#permission{
+      width:160px;
+      height:160px;
+  }
+   span.choose.mechanism,span.choose.mechanism select{
+       width:260px;
+   }
+
+  div.pop_dialog.add_user form input{
+      margin: 0;
+  }
+  div.pop_dialog.add_user form>div#jsxz a{
+       border:1px solid #1bb8cb;
+       display: block;
+       width:100%;
+      text-align: center;
+   }
+  div.pop_dialog.add_user form>div#jsxz input{
+      margin:10px 0;
+  }
+/*------------------del----------------*/
+  div.pop_dialog.del_user>div.content{
+       width:300px;
+       margin-top: 120px;
+       padding-bottom: 5px;
+  }
+  .pop_dialog>.content>form>div#jsxz{
+      margin:0 10%;
+      width:80%;
+
+  }
+  .pop_dialog>.content>form>div#jsxz>div{
+      width:50%;
+      float: left;
+
+  }
+  .pop_dialog>.content>form>div#jsxz>div>div{
+      border-radius: 2px;
+      border:1px solid #ccc;
+      width:90%;
+      height: 120px;
+  }
+  .pop_dialog>.content>form>div#jsxz input{
+      width:90%;
+      margin: 10px 0;
+      padding:0;
+  }
+  .pop_dialog>.content>form>div#jsxz>div>div:first-child{
+      margin-left:15%;
+  }
+
+   div.pop_dialog.add_user form div.choose_role{
+       position: relative;
+   }
+   .btn_move {
+       background-color: #fff;
+       border: 1px solid #ccc;
+       cursor: pointer;
+       display: block;
+       float: none;
+       height: 28px;
+       margin-left: 0;
+       position: relative;
+       width: 200px;
+   }
+   .multiselect {
+       border: 1px solid #ccc;
+       height: 150px;
+       width: 200px;
+   }
+   .btn_move > i {
+       color: #34abe3 !important;
+   }
+
+.choose_role{
+	height:200px;
+}
+   .choose_role>div{
+   
+      float:left;
+      width:220px;
+   }
+ 
+   #menuContent{
+   min-height: 300px;
+       height:300px;
+   }
+   #menuContent > ul.ztree{
+       float: left;
+       
+   }

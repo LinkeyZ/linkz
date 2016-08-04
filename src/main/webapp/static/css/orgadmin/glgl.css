@@ -1,0 +1,25 @@
+table.matrix tr:first-child{
+    text-align: center;
+}
+table.matrix tr td:first-child{
+    width:60%;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+table.matrix tr td:last-child{
+
+}
+
+a.detail{
+    background: url("/static/images/orgadmin/ckxq.png") no-repeat left center;
+    padding-left: 20px;
+}
+a.detail{
+    background: url("/static/images/orgadmin/ljbt.png") no-repeat left center;
+    padding-left: 20px;
+}
+div.pop_dialog.ckxq ul li{
+    list-style: none;
+    line-height: 26px;
+}

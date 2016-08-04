@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task-3.0.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+		
+	<context:annotation-config />
+	<aop:aspectj-autoproxy proxy-target-class="true"/> 
+
+	<!-- 扫描Controller -->
+	<context:component-scan base-package="com.meatball.linkz" ></context:component-scan>
+	
+	<!-- 重写BeanPostProcessor ， 可以获取加载进入spring 的注册信息
+	<bean class="com.meatball.linkz.common.debugger.BeanAware"></bean> 
+	-->
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:resources.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${connection.driver_class}" />
+		<property name="jdbcUrl" value="${connection.url}" />
+		<property name="user" value="${connection.username}" />
+		<property name="password" value="${connection.password}" />
+		<property name="maxPoolSize" value="80" />
+		<property name="minPoolSize" value="1" />
+		<property name="initialPoolSize" value="1" />
+		<property name="maxIdleTime" value="20" />
+	</bean>
+	
+	<!-- hibernate Config -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<list>
+				<value>com.meatball.linkz.project.goods.model</value>
+				<value>com.meatball.linkz.project.user.model</value>
+				<value>com.meatball.linkz.project.weather.model</value>
+				<value>com.meatball.linkz.project.city.model</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Mybatis Config 
+	 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+         <property name="dataSource" ref="dataSource" />
+         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+         <property name="typeAliasesPackage" value="com.meatball.linkz.project.goods.dao.SysGoods"></property>
+         <property name="mapperLocations" value="com.meatball.linkz.project.goods.dao.mapper.SysGoodsMapper.xml"></property>
+         <property name="plugins">
+             <list>
+                 <bean
+                    class="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
+                     <property name="dialectClass"
+                         value="com.github.miemiedev.mybatis.paginator.dialect.OracleDialect"></property>
+                 </bean>
+             </list>
+         </property>
+     </bean>
+     -->
+     
+  	 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
+  	 	<property name="dataSource" ref="dataSource"/>
+  	 	
+  	 	<property name="configLocation" value="classpath:mybatis-config.xml"/>
+  	 	
+  	 	<property name="mapperLocations" value="classpath:com/meatball/linkz/project/goods/mybatis/mapper/*.xml"/>
+  	 </bean>
+  	 <!-- 配置扫描器 -->
+     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+      <!-- 扫描me.gacl.dao这个包以及它的子包下的所有映射接口类 -->
+     	<property name="basePackage" value="com.meatball.linkz.project.goods.mybatis.dao"/>
+     	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+     </bean>
+     
+ 	<!-- transaction -->
+     <bean id="transactionManager"
+         class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+         <property name="sessionFactory">
+             <ref local="sessionFactory" />
+         </property>
+     </bean>
+
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" isolation="READ_COMMITTED"/>
+			<tx:method name="upload*" propagation="REQUIRED" />
+			<tx:method name="merge*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="clear*" propagation="REQUIRED" />
+			<tx:method name="put*" propagation="REQUIRED" />
+			<tx:method name="use*" propagation="REQUIRED" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="load*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="after*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="list*" propagation="REQUIRED" />
+			<tx:method name="pag*" propagation="REQUIRED" />
+			<tx:method name="query*" propagation="REQUIRED"  />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 只对业务逻辑(service)层实施事务 -->
+	<aop:config>
+		<aop:pointcut id="txPointcut" 
+			expression="execution(* com.meatball.linkz..service.*.*(..))" />
+		<aop:advisor  advice-ref="txAdvice" pointcut-ref="txPointcut" />
+	</aop:config>
+</beans>

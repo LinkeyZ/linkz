@@ -1,0 +1,15 @@
+#login_wrap{width:100%;height:570px;overflow:hidden;position: relative;margin-bottom:208px;}
+.login{width:1920px;height:570px;background:url(/static/images/doctor/login_bg.png) no-repeat;position:absolute;left:50%;margin-left:-960px;}
+.login_in{width:1000px;height:100%;margin:0 auto;}
+.login_in .login_msg{width:350px;height:380px;background-color:#e5e5e5;float:right;margin-top:80px;margin-right:8px; padding:70px 0 0 40px;}
+
+.txt_user{width:206px;height:38px;padding-left:50px;border:1px solid #ccc;color:#666;}
+.txt_yz{width:100px;background:#fff url(/static/images/doctor/login_icon_yz.png) no-repeat 10px center;float:left;}
+.login_msg span{height:30px;line-height:30px;font-size:12px;color:#f00;background:url(/static/images/doctor/new_icon.png) no-repeat 12px center;padding-left:38px;}
+.user_info{background:url(/static/images/doctor/login_icon_user.png) no-repeat 10px center;background-color: #fff;}
+.password{background:#fff url(/static/images/doctor/login_icon_pwd.png) no-repeat 10px center;}
+.login_msg a{text-decoration: underline;font-size: 14px;}
+.login_msg a.a_check{text-decoration: none;}
+.login_msg a.btn_login{display:block;width:320px;height:46px;line-height:46px;text-align:center;color:#fff;background-color:#0096dc;font-size:20px;text-decoration:none;}
+.login_msg .jilu{height:40px;}
+.login_msg img{float:left;margin-left:12px;}

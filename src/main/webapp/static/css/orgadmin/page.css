@@ -1,0 +1,128 @@
+
+   /*-----------------------------角色管理----------------------*/
+   .page{
+       padding:30px 10px;
+       padding-bottom: 60px;
+       background-color: #fff;
+   }
+   .page .left{
+       float: left;
+   }
+   .page .right{
+       float:right;
+   }
+
+   div.page_in *{
+       line-height: 30px;
+       vertical-align: middle;
+   }
+
+   div.page_in .gray{
+       opacity: 0.5;
+   }
+   div.page_in a {
+       background-color:#f9f9f9;
+       border-radius: 3px;
+       border:1px solid #eee;
+       color: #000;
+       margin-right: 3px;
+
+       height:30px;
+       text-align: center;
+       display: inline-block;
+
+       width:30px;
+       text-decoration: none;
+   }
+   div.page_in a.focus {
+       display: inline-block;
+       background-color: #1bb8cb;
+       border-radius: 3px;
+       border:1px solid #eee;
+       color:#fff;
+       margin-right: 3px;
+
+       height:30px;
+   }
+   div.page_in a.page-next,div.page_in a.page-start{
+       width:auto;
+       padding:0 14px;
+   }
+   /*---------------------------------------PAGE---------------------------*/
+   div.meneame {
+       background:#fff;
+       padding:30px;
+       color: #000;
+       text-align: center;
+   }
+   div.meneame *{
+       line-height: 30px;
+       vertical-align: middle;
+   }
+   div.meneame a.disabled img {
+       opacity: 0.5;
+
+   }
+
+   div.meneame span.current {
+       display: inline-block;
+       background-color: #1bb8cb;
+       border-radius: 3px;
+       border:1px solid #eee;
+       color:#fff;
+       margin-right: 6px;
+       width:30px;
+       height:30px;
+
+
+   }
+
+   div.meneame a ,div.meneame span.slh{
+       background-color:#f9f9f9;
+       border-radius: 3px;
+       border:1px solid #eee;
+       color: #000;
+       margin-right: 6px;
+       width:30px;
+       height:30px;
+
+       display: inline-block;
+
+       text-decoration: none;
+   }
+   div.meneame a.page_sw{
+       font-size: 10px;
+   }
+
+
+   #tab_detail{width:1000px;margin:20px auto 50px;}
+   #tab_detail .tab{border-bottom:2px solid #0795d8;height:40px;}
+   #tab_detail .tab{border-bottom:2px solid #0795d8;height:40px;}
+   #tab_detail .tab ul{position:relative;}
+   #tab_detail .tab ul li{float:left;width:108px;height:40px;background-color: #0795d8;border:1px solid #0795d8;position:absolute;cursor:pointer;line-height:42px;text-align:center;color:#fff;font-size:16px;}
+   #tab_detail .tab ul li.tab2{left:112px;}
+   #tab_detail .tab ul li.cur{border-bottom:1px solid #fff;background-color: #fff;color:#333;}
+
+   #tab_detail .img_qushi{width:100%;height:472px;border:1px solid #ccc;padding:30px 0 40px;}
+   .date_qushi{width:144px;/* height:19px; */margin:0 auto 30px;padding-bottom:30px;}
+   .date_qushi a,.date_qushi span{float:left;display:block;}
+   .date_qushi a.date_l{background:url(/static/images/doctor/date_l.png) no-repeat;width:17px;height:19px;}
+   .date_qushi a.date_r{background:url(/static/images/doctor/date_r.png) no-repeat;width:17px;height:19px;}
+   .date_qushi span{width:110px;text-align:center;font-size:16px;line-height:19px;}
+   #tab_detail .img_qushi img{margin:0 auto;}
+   #tab_detail .xuetang{display:none;}
+
+
+   .ys_tab{margin-top:15px;/* overflow:hidden; */}
+   .ys_tab li{width:162px;height:37px;background-color:#0795d8;float:left;margin-right:1px;text-align:center;line-height:36px;color:#fff;cursor:pointer;border-bottom-left-radius:10px;border-bottom-right-radius:10px;border:1px solid #0795d8;position:relative;}
+   .ys_tab li.cur{background-color: #fff;color:#0795d8; }
+   .ys_detail{padding:30px 0 30px 50px;}
+   .ys_detail .ys_detail01,.ys_detail .ys_detail02,.ys_detail .ys_detail03{display:none;}
+   .ys_detail .cur{display:block;}
+
+   .ys_tab li ul{position:absolute;top:38px;display:none;}
+   .ys_tab li ul li{border:1px solid #ccc;width:146px;border-top:0;height:30px;text-align:center;line-height: 30px;background:#fff;margin-left:7px;border-radius:0;}
+   .ys_tab li ul li a{background: none;
+       color: #333;
+       display: block;}
+   .ys_tab li ul li a:hover{color:#0795d8;}

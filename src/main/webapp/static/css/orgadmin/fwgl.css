@@ -1,0 +1,28 @@
+table td.tcmc{
+    width:16%;
+}
+table td.fwzq,table td.sfpc,table td.jccp,table td.gycp,table td.glfs{
+    width:12%;
+}
+div#main div.dialog.fwgl > .title input[type="search"] {
+    border: 0 none;
+    border-radius: 5px;
+    height: 24px;
+    margin-bottom: 6px;
+    margin-left: 30px;
+    margin-right: 10px;
+    width: 160px;
+}
+input#period,input#frequency{
+    width:50px;
+}
+input#tcname{
+    width:200px;
+}
+span.choose.admintype,span.choose.admintype select{
+    width:160px;
+}
+div.pop_dialog.del .content{
+    width:300px;
+}
+form div.margintop20 input{ clear:both;margin-top:20px}

@@ -1,0 +1,6 @@
+.page{width:1000px;height:32px;margin:30px auto 70px;line-height:30px;}
+.page .right{float:right;}
+.page a{display:block;float:left;margin-left:5px;height:32px;background-color:#e6e6e6;border:1px solid #ccc;padding:0 14px;line-height:32px;color:#666;}
+.page a:hover{background-color: #18a6e7;border:1px solid #18a6e7;color:#fff;}
+.page .gray{padding:0 8px;}
+.page .focus{background-color: #18a6e7;border:1px solid #18a6e7;color:#fff;}

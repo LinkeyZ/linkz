@@ -1,0 +1,14 @@
+html, body, div, span,h1, h2, h3, h4, p,a, address,del, em, img, s,strong,b, u, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,p,input { margin: 0; padding: 0; border: 0; list-style: none; background: transparent; }
+body{font-size: 14px;color:#333;font-family: "ËÎÌו";}
+a{text-decoration: none;color: #333;}
+img{vertical-align:top;}
+
+body{background-color: #efefef;}
+.main{width:750px;margin:0 auto;background-color: #fff;padding: 20px 30px 40px;}
+h1{text-align: center;line-height: 32px;}
+.problem{line-height: 28px;}
+.answer{ height: 30px;padding-left: 15px;}
+.wenjuan li{margin-top: 10px;}
+a{display: block; text-align: center;margin-top: 30px;color:blue;}
+input{margin-right: 5px;}
+.wenjuan li ul li {float: left;margin-right: 34px;}

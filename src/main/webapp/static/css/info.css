@@ -1,0 +1,64 @@
+*{margin:0;padding:0;list-style: none;}
+body{font-size: 12px;color: #666;}
+a{text-decoration: none;}
+a:link{color: #555;}
+a:visited{color: #555;}
+a:hover{text-decoration: underline;}
+
+.box{width:955px;height: 1000px; margin:0 auto;}
+.left{width: 150px;float: left;}
+.left ul {border-bottom: 1px solid #CCC;margin-top: 4px;}
+.list_title ul li {font: 14px/41px "宋体";border-top: 1px solid #CCC; }
+.list_title li div{padding-left:5px;border-top: 1px solid #ccc;}
+.list_title li div a {color: #555;font-size: 14px;display: block; line-height: 40px;}
+.list_title .sub {padding-left: 5px;}
+.list_title .sub li {line-height: 26px;padding-left:5px;}
+.list_title .sub li a {font-size: 12px;font-weight: 400;}
+.list_title .sub{display: none;}
+.list_title .first .sub{display: block;}
+.list_title .sub .current{background-color: #496db8;}
+.list_title .sub .current a{color: #fff;}
+#edit{margin-left: 100px;}
+
+.right{width: 790px;height: 600px;float: right;}
+input { vertical-align: middle; margin: 0px; padding: 0px; }
+.right .addChannel{width: 98%;margin: 3px auto 0px;}
+h1 { background: url('/static/images/bg-content-box.gif') repeat scroll 0% 0% transparent; display: block; border: 1px solid #CCC; font-size: 14px; /* color: #666; */ line-height: 40px; height: 40px; text-align: center;}
+.aa1 { width: 100%; height: auto; float: left; line-height: 28px; border-bottom: 1px dashed #CCC; padding: 10px 0px 5px; }
+.aa1 p { width: 30%; height: 21px; float: left; text-align: right; }
+.input_public { border: 1px solid #C1C1C1; font-size: 14px; line-height: 20px; height: 26px; padding-left: 4px; }
+.aa1 div { width: 60%; height: 25px; float: left; text-align: left; padding-left: 20px; line-height: 25px;width:30%;height:auto; }
+.aa1 div.date { width: 60%; height: 25px; float: left; text-align: left; padding-left: 20px; line-height: 25px;height:auto; }
+textarea{margin-bottom:5px;width:220px;height: 90px;resize:none;}
+.aa1 .product{width:60%;}
+.edit{padding-left:78px;}
+.edit .subText{margin-left: 276px;}
+.button { width: 100%; height: 80px; float: left; padding-top: 30px;}
+.but-02 { color: #333; background: url('/static/images/but-b.gif') repeat; width: 50px; height: 20px; border-style: none;cursor: pointer;margin-left: 362px;}
+.but-02:hover { color: #515F6A; border-style: none; width: 50px; height: 20px; background: url('/static/images/but-bbb.gif') repeat; cursor: pointer; margin-left: 362px;}
+
+.right .manageChannel{width: 98%;margin: 3px auto 0px;}
+.manageChannel table { border-top: 0px none; border-right: 0px none; border-collapse: collapse; line-height: 25px; font-size: 12px; text-align: center; margin: 20px 0px 30px; }
+.viewTable { width: 100%; border: 1px solid #CCC; border-collapse: collapse; border-spacing: 0px;}
+.viewTable td { border: 1px solid #CCC; padding: 0px; }
+.manageChannel table td { border-color: #CCC; }
+.title { color: #666; background: url('/static/images/bg-content-box.gif') repeat scroll 0% 0% transparent; font-weight: bold; border: 1px solid #CCC; }
+.page { width: 100%; padding: 10px 0px; }
+.page span { margin: 0px 5px 0px 10px; }
+.viewTable .but-02 { color: #333; background: url('/static/images/but-b.gif') repeat scroll 0% 0% Transparent; width: 50px; height: 20px; border-style: none; margin: 5px; cursor: pointer; }
+.viewTable .but-02:hover { color: #515F6A; border-style: none; width: 50px; height: 20px; margin:5px; background: url('/static/images/but-bbb.gif') repeat scroll 0% 0% transparent; cursor: pointer; }
+.but-03 {  color: #333; background: url('/static/images/but-b.gif') repeat scroll 0% 0% Transparent; width: 50px; height: 20px; border-style: none; margin: 5px; cursor: pointer;}
+.but-03:hover { color: #515F6A; border-style: none; width: 50px; height: 20px; margin:5px; background: url('/static/images/but-bbb.gif') repeat scroll 0% 0% transparent; cursor: pointer;  }
+
+/*日期时间框*/
+.aa1 .input-text { border: 1px solid #c1c1c1; border-radius: 1px; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); height: 26px; line-height: 26px; color: #333;width:92px;}
+.input-text input { border: 0; height: 100%; background: transparent; position: absolute;left: 9px;}
+.item-info1 .item_info2 .input-text .input-date { line-height: 26px; }
+.icon-cal1{ background: url("/static/images/icon.png") no-repeat; display: inline-block; }
+.icon-cal1 { width: 16px; height: 17px; background-position: 0 -240px; }
+.input-text .icon-cal1 { float: right; margin: -22px 5px 0 0; }
+.date p{width:20px;}
+.manageChannel .manageTable{margin-top:275px;}
+/*/日期时间框*/
+
+.list_title .sub li a{display:block;width:100%;height: 100%;}

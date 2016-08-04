@@ -1,0 +1,21 @@
+a{cursor: pointer;}
+.pop_dialog.del .content{ width:300px;}
+#main .dialog.choose_member .title>span,#main .dialog.check_member .title>span{background: none; padding-left: 10px;}
+div#main div.dialog > .title input[type="search"] {border: 0 none; border-radius: 5px;height: 24px;margin-bottom: 6px;margin-left: 30px;margin-right: 10px;width: 160px;}
+td.group_name,td.group_description{width:20%;}
+td.member_num{width:8%;}
+td.cjsj,td.operation{width:21%;}
+table a{ margin-right:10px;}
+a.add{  background:url("/static/images/orgadmin/tjbt.png") no-repeat left center; padding-left:20px;}
+a.look{background:url("/static/images/orgadmin/ckxq.png") no-repeat left center; padding-left:24px;}
+a.del{background:url("/static/images/orgadmin/sc.png") no-repeat left center; padding-left:20px;}
+.pop_dialog .content{ width:450px;}
+input#group_name{ width:260px;}
+textarea#groud_description { border: 1px solid #ccc; color: #333;font-size: 14px; height:200px; line-height: 28px; padding: 15px; width: 260px;margin-bottom: 20px;}
+table.matrix td.name{width:9%}
+table.matrix td.telephone,table.matrix td.role,table.matrix td.department,table.matrix td.type{ width:13%;}
+table.choose_member.matrix td.cjsj,table.choose_member.matrix td.operation{width:20%;}
+table.choose_member.matrix td.operation{width:12%;}
+
+.relation_btn {background-color: #fff;border-bottom-left-radius: 3px;border-bottom-right-radius: 3px; padding: 15px 0; text-align: center;}
+.relation_btn a {    background-color: #1bb8cb;border-radius: 2px;color: #fff;letter-spacing: 3px;margin: 0 15px;padding: 5px 25px;}

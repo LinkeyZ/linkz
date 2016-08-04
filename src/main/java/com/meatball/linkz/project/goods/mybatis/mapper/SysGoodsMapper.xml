@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.meatball.linkz.project.goods.mybatis.dao.SysGoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.meatball.linkz.project.goods.mybatis.domain.SysGoods" >
+    <constructor >
+      <idArg column="goods_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="createMan" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="endTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="goods_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="is_valid" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="goodsType_goods_type_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    goods_id, createMan, createTime, endTime, goods_name, is_valid, goodsType_goods_type_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_goods
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_goods
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.meatball.linkz.project.goods.mybatis.domain.SysGoods" >
+    insert into sys_goods (goods_id, createMan, createTime, 
+      endTime, goods_name, is_valid, 
+      goodsType_goods_type_id)
+    values (#{goodsId,jdbcType=INTEGER}, #{createman,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{endtime,jdbcType=TIMESTAMP}, #{goodsName,jdbcType=VARCHAR}, #{isValid,jdbcType=INTEGER}, 
+      #{goodstypeGoodsTypeId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.meatball.linkz.project.goods.mybatis.domain.SysGoods" >
+    insert into sys_goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="goodsId != null" >
+        goods_id,
+      </if>
+      <if test="createman != null" >
+        createMan,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="endtime != null" >
+        endTime,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="isValid != null" >
+        is_valid,
+      </if>
+      <if test="goodstypeGoodsTypeId != null" >
+        goodsType_goods_type_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="goodsId != null" >
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="createman != null" >
+        #{createman,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        #{isValid,jdbcType=INTEGER},
+      </if>
+      <if test="goodstypeGoodsTypeId != null" >
+        #{goodstypeGoodsTypeId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.meatball.linkz.project.goods.mybatis.domain.SysGoods" >
+    update sys_goods
+    <set >
+      <if test="createman != null" >
+        createMan = #{createman,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        endTime = #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="goodsName != null" >
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+      <if test="goodstypeGoodsTypeId != null" >
+        goodsType_goods_type_id = #{goodstypeGoodsTypeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.meatball.linkz.project.goods.mybatis.domain.SysGoods" >
+    update sys_goods
+    set createMan = #{createman,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      endTime = #{endtime,jdbcType=TIMESTAMP},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      is_valid = #{isValid,jdbcType=INTEGER},
+      goodsType_goods_type_id = #{goodstypeGoodsTypeId,jdbcType=INTEGER}
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </update>
+</mapper>
